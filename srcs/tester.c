@@ -276,28 +276,28 @@ void	test_list_remove_if()
 	ft_list_push_front(&list, strdup("F"));
 
 	printf_list(list);
-	printf(BOLDRED"\nREMOVE B:\n"RESET);
+	printf(CYAN"\nREMOVE B:\n"RESET);
 	ft_list_remove_if(&list, "B", &strcmp, &free);
 	printf_list(list);
-	printf(LGREEN"\nOK\n"RESET);
-	printf(BOLDRED"\nREMOVE A:\n"RESET);
+	printf(LGREEN"OK\n"RESET);
+	printf(CYAN"\nREMOVE A:\n"RESET);
 	ft_list_remove_if(&list, "A", &strcmp, &free);
 	printf_list(list);
-	printf(LGREEN"\nOK\n"RESET);
-	printf(BOLDRED"\nREMOVE H:\n"RESET);
+	printf(LGREEN"              OK\n"RESET);
+	printf(CYAN"\nREMOVE H:\n"RESET);
 	ft_list_remove_if(&list, "H", &strcmp, &free);
 	printf_list(list);
-	printf(LGREEN"\nOK\n"RESET);
-    printf(BOLDRED"\nREMOVE LAST F:\n"RESET);
+	printf(LGREEN"              OK\n"RESET);
+    printf(CYAN"\nREMOVE LAST F:\n"RESET);
 	ft_list_remove_if(&list, "F", &strcmp, &free);
 	printf_list(list);
-	printf(LGREEN"\nOK\n"RESET);
-	printf(BOLDRED"\nREMOVE C D E:\n"RESET);
+	printf(LGREEN"              OK\n"RESET);
+	printf(CYAN"\nREMOVE C D E:\n"RESET);
 	ft_list_remove_if(&list, "C", &strcmp, &free);
 	ft_list_remove_if(&list, "D", &strcmp, &free);
 	ft_list_remove_if(&list, "E", &strcmp, &free);
     printf_list(list);
-	printf(LGREEN"\nOK\n"RESET); 
+	printf(LGREEN"              OK\n"RESET); 
     free(list);
 
 }
@@ -316,7 +316,7 @@ void	test_atoi(void)
 		index = i;
 		printf("\n%-9s= %3s\n", "String", str[index]);
 		printf("%-9s= %3s\n","Base", base[index]);
-		printf(LGREEN"%-9s= %i\n\n" RESET, "Return" , ft_atoi_base_bonus(str[index], base[index]));
+		printf(LGREEN"%-9s= %i\n\n" RESET, "Return" , ft_atoi_base(str[index], base[index]));
 	}
 }
 int		main(int argc, char **argv)

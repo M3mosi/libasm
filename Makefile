@@ -29,10 +29,6 @@ re:				fclean $(NAME)
 
 test:			$(NAME)
 				gcc $(FLAGS) -L. -lasm -o $(TEST) srcs/tester.c
-				./$(TEST) 
-
-testb:			$(NAME)
-				gcc $(FLAGS) -L. -lasm -o $(TEST) srcs/tester.c
 				./$(TEST) bonus 
 				echo	"Pulisco tutto..."
 				make fclean

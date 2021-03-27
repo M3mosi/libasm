@@ -1,7 +1,7 @@
-            global      _ft_atoi_base_bonus           ;int	ft_atoi_base(char *str, char *base)
+            global      _ft_atoi_base           ;int	ft_atoi_base(char *str, char *base)
             section     .text
 
-_ft_atoi_base_bonus:
+_ft_atoi_base:
             cmp         rdi,            0
             je          ret_err
             push        rcx
