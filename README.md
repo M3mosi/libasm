@@ -1,2 +1,2 @@
 # libasm
-TEST ->  make bonus && make test
+make bonus && make test
